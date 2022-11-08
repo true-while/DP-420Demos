@@ -1,0 +1,16 @@
+SELECT * FROM c WHERE c.OrderNumber = "NL-11"
+
+SELECT DISTINCT o.OrderAddress.City
+FROM Orders o
+
+SELECT VALUE  { 
+  "Order City": o.OrderAddress.City,   
+  "Order Number" : o.OrderNumber } 
+FROM Orders o 
+WHERE o.OrderAddress.City IN ('Redmond', 'Seattle')
+
+SELECT o.id, o.OrderAddress.City
+FROM Orders o  
+WHERE CONTAINS(o.OrderAddress.State, "fl", true)
+
+

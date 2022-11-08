@@ -1,0 +1,20 @@
+{ 
+  "indexingMode": "consistent", "automatic": true, 
+  "includedPaths": [ 
+      { "path": "/TotalPrice/?" },
+      { "path": "/OrderCustomer/Name/?"},
+      { "path": "/OrderAddress/City/?"} 
+  ], 
+  "excludedPaths": [ { "path": "/*" } ] ,
+  "compositeIndexes": [
+        [
+            { "path": "/OrderAddress/City", "order":"ascending" }, 
+            { "path": "/TotalPrice", "order":"ascending" } 
+        ],
+        [
+            { "path": "/OrderAddress/City", "order":"ascending" }, 
+            { "path": "/OrderCustomer/Name", "order":"ascending" } 
+        ]
+  
+  ]
+}

@@ -1,0 +1,43 @@
+no index
+{
+        "indexingMode": "none"
+}
+
+default:
+
+{
+    "indexingMode": "consistent",
+    "automatic": true,
+    "includedPaths": [
+        {
+            "path": "/*"
+        }
+    ],
+    "excludedPaths": [
+        {
+            "path": "/\"_etag\"/?"
+        }
+    ]
+}
+
+Example:
+
+
+"compositeIndexes":[  
+        [  
+            {  
+                "path":"/OrderCustomer/Name",
+                "order":"ascending"
+            },
+            {  
+                "path":"/OrderCustomer/IsActive",
+                "order":"descending"
+            }
+        ]
+    ]
+
+
+QQQ:
+
+SELECT * FROM c WHERE c.OrderCustomer.Name = 'UpperLevel' and c.OrderCustomer.IsActive = true
+ ORDER BY c.OrderCustomer.Name ASC, c.OrderCustomer.IsActive DESC

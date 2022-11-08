@@ -1,0 +1,25 @@
+############################################################################################################
+# following commands should be executed from Azure Cloud Shell bash or local bash
+############################################################################################################
+
+#create resource group
+az group create -l eastus2 -n CosmosDB-RG
+
+# to avoid name collisions generate unique name for your DB
+account=cosmosdb-$RANDOM
+
+#create Cosmos DB account 
+az cosmosdb create --name $account --resource-group CosmosDB-RG 
+
+#create Cosmos DB database with SQL API
+az cosmosdb sql database create --account-name $account --resource-group CosmosDB-RG --name DP420Demo 
+
+#create Cosmos DB container
+az cosmosdb sql container create -g CosmosDB-RG  -a $account -d DP420Demo -n CLIDemo --partition-key-path "//id" --throughput "400"
+
+#applay index
+az cosmosdb sql container update -g CosmosDB-RG  -a $account -d DP420Demo -n CLIDemo  --idx '@.\policy.json'
+
+#scale container 
+az cosmosdb sql container throughput update -g CosmosDB-RG  -a $account -d DP420Demo -n CLIDemo --throughput '500'
+

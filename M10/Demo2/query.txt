@@ -1,0 +1,4 @@
+SELECT * FROM orders o 
+                        WHERE o.TotalPrice > 400 
+                        AND startsWith(o.OrderCustomer.Name, 'Le') 
+                        AND o.OrderAddress.City='NYC'

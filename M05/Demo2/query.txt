@@ -1,0 +1,4 @@
+SELECT products.ProductItem.ProductName as Name, SUM(products.Count) as Count
+  FROM Orders o 
+  JOIN products IN o.OrderItems
+  GROUP BY products.ProductItem.ProductName

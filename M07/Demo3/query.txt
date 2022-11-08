@@ -1,0 +1,9 @@
+#top 100 orders from Seattle with total count calculation
+search=seattle&$count=true&$top=100
+
+#cities with count by orders
+search=*&facet=OrderAddress/City
+
+#highlighted search result
+search=money&highlight=Description
+

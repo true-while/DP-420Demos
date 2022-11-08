@@ -1,0 +1,5 @@
+{ 
+  "indexingMode": "consistent", "automatic": true, 
+  "includedPaths": [ { "path": "/TotalPrice/?" } ], 
+  "excludedPaths": [ { "path": "/*" } ] 
+}

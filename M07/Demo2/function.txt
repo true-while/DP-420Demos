@@ -1,0 +1,13 @@
+#r "Microsoft.Azure.DocumentDB.Core"
+using System;
+using System.Collections.Generic;
+using Microsoft.Azure.Documents;
+
+public static void Run(IReadOnlyList<Document> input, ILogger log)
+{
+    if (input != null && input.Count > 0)
+    {
+        msg = "Documents modified " + input.Count + "First document Id " + input[0].Id;
+        log.LogInformation(msg);
+    }
+}
