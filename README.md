@@ -37,7 +37,7 @@
 
 ### [Demo 1: .NET SDK: Change feed processing](M07/Demo1/)
 ### [Demo 2: Azure Portal: Azure Function integration](M06/Demo2/)
-### [Demo 3: Azure Portal: Cognitive Search Integration](M06/Demo3/)
+### Demo 3: Azure Portal: Cognitive Search Integration
 
 ## Module 8: Implement a data modeling and partitioning strategy for Azure Cosmos DB SQL API
 
@@ -57,7 +57,7 @@
 
 ### [Demo 1: Azure Portal: Cosmos DB monitoring](M11/Demo1/)
 ### [Demo 2: Azure Portal: Configuring Alerts](M11/Demo2/)
-### [Demo 3: Azure Portal: Restore Cosmos DB](M10/Demo3/)
+### Demo 3: Azure Portal: Restore Cosmos DB
 ### [Demo 4: .NET SDK: Always Encrypt](M10/Demo4/) 
 
 ## Module 12: Manage an Azure Cosmos DB SQL API solution using DevOps practices
