@@ -131,7 +131,7 @@ namespace TheCloudShopsLoader
                 new EncryptionKeyWrapMetadata(
                     KeyEncryptionKeyResolverName.AzureKeyVault,
                     "cosmos",
-                    "https://alexdp420demo.vault.azure.net/keys/cosmos/4eff3767c57643529a99c5131c2bb7a6",
+                    ConfigurationManager.AppSettings["KeyPath"],
                     EncryptionAlgorithm.RsaOaep.ToString()));
 
 
