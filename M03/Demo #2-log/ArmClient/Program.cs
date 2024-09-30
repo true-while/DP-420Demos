@@ -2,19 +2,25 @@
 using Azure.ResourceManager;
 using Azure.ResourceManager.Resources;
 using Azure.ResourceManager.CosmosDB;
+using System.Configuration;
 
 namespace CosmosDBWithEventualConsistency
 {
 
     public class Program
     {
+
+        //private static readonly string SubscriptionID = ConfigurationManager.AppSettings["subscriptionid"];
+        //private static readonly string TenantID = ConfigurationManager.AppSettings["tenantid"];
+        private static readonly string resourceGroupName = "DP-420";
+
         public static void Main(string[] args)
         {
-            ArmClient client = new ArmClient(new DefaultAzureCredential());
-
-            string resourceGroupName = "DP420";
+            ArmClient client = new ArmClient(new DefaultAzureCredential();
 
             SubscriptionResource subscription = client.GetDefaultSubscription();
+
+            
             Console.WriteLine($"SubID:{subscription.Id}");
 
             ResourceGroupCollection resourceGroups = subscription.GetResourceGroups();

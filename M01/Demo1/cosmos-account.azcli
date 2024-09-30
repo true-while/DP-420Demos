@@ -1,0 +1,19 @@
+####################################
+#  Powershell syntax
+#########################################
+
+#create the resource group
+az group create -l canadacentral -n DP420-RG
+
+# to avoid name collisions generate the unique name for your DB
+$account=cosmosdb-$RANDOM
+
+#create the Cosmos DB account 
+az cosmosdb create --name $account --resource-group DP420-RG 
+
+#create Cosmos DB database with SQL API
+az cosmosdb sql database create --account-name $account --resource-group DP420-RG --name DP420Demo 
+
+#create Cosmos DB container
+$partitionKey="/OrderAddress/City"
+az cosmosdb sql container create -g DP420-RG  -a $account -d DP420Demo -n TheCloudShops --partition-key-path $partitionKey --throughput "400"

@@ -1,0 +1,40 @@
+{
+    "id": "Smirnoff.7",
+    "partitionKey": "Smirnoff",
+    "LastName": "Smirnoff",
+    "Parents": [
+        {
+            "FamilyName": "Smirnoff",
+            "FirstName": "Alexey"
+        },
+        {
+            "FamilyName": "Smirnoff",
+            "FirstName": "Olga"
+        }
+    ],
+    "Children": [
+        {
+            "FamilyName": "Smirnoff",
+            "FirstName": "Sofia",
+            "Gender": "female",
+            "Grade": 18,
+            "Pets": [
+                {
+                    "GivenName": "Fedor"
+                }
+            ]
+        },
+        {
+            "FamilyName": "Smirnoff",
+            "FirstName": "Oscar",
+            "Gender": "male",
+            "Grade": 5,
+            "Pets": null
+        }
+    ],
+    "Address": {
+        "State": "FL",
+        "County": "Miami-Dade",
+        "City": "Miami"
+    }
+}

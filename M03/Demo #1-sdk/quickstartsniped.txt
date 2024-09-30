@@ -1,0 +1,7 @@
+            // Create a new instance of the Cosmos Client
+            this.cosmosClient = new CosmosClient(EndpointUri, PrimaryKey, new CosmosClientOptions() { 
+                ConsistencyLevel = ConsistencyLevel.Eventual,
+                ConnectionMode = ConnectionMode.Direct,
+                ApplicationPreferredRegions = new List<string> { "eastus2" },
+                ApplicationName = "CosmosDBDotnetQuickstart" 
+            });
