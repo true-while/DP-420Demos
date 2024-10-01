@@ -1,0 +1,43 @@
+------------------------------------ default:
+
+{
+    "indexingMode": "consistent",
+    "automatic": true,
+    "includedPaths": [
+        {
+            "path": "/*"
+        }
+    ],
+    "excludedPaths": [
+        {
+            "path": "/\"_etag\"/?"
+        }
+    ]
+}
+
+
+------------------------------------- new
+
+
+{ 
+    "indexingMode": "consistent", 
+    "automatic": true, 
+    "includedPaths": [ 
+                       { 
+                           "path": "/OrderNumber/?" 
+                       }, 
+                       { 
+                           "path": "/OrderItems/[]/ProductItem/*" 
+                       } 
+                     ], 
+    "excludedPaths": [ 
+                       { 
+                           "path": "/*" 
+                       } 
+                     ] 
+}
+
+--------------------------------- query
+SELECT * FROM c Where c.OrderNumber = 'NL-21'
+
+SELECT * FROM c Where c.OrderCustomer.Name = 'Level4you'

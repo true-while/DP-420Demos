@@ -24,7 +24,7 @@ async function init(client, databaseId, containerId, partitionKey) {
         .database(databaseId)
         .containers.createIfNotExists(
             { id: containerId, partitionKey },
-            { offerThroughput: 400 }
+            //{ offerThroughput: 400 }
         );
 
     console.log(`Created container: ${ container.id }\n`);
@@ -79,7 +79,7 @@ async function updateItem(container, item) {
 
     try {
         var { resource: updatedItem } = await container
-            .item(item.id)
+            .item(item.id, 'fun')
             .replace(item, { accessCondition: { type: 'IfMatch', condition: item._etag } });
 
         console.log(`Updated item: ${ updatedItem.id } - ${ updatedItem.description }`); 
