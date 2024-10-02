@@ -15,7 +15,7 @@
 ## Module 3: Connect to Azure Cosmos DB SQL API with the SDK
 
 ### [Demo 1: .NET SDK, Node.js SDK](M03/Demo1/)
-### [Demo 2: Fluent .NET SDK](M03/Demo2/)
+### [Demo 2: Loging .NET SDK](M03/Demo2/)
 
 ## Module 4: Access and manage data with the Azure Cosmos DB SQL API SDKs
 
