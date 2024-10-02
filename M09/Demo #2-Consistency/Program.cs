@@ -140,7 +140,6 @@ namespace TheCloudShopsLoader
 
             string token = await CreateItemWithEventialConsistencyAsync(order1, ConsistencyLevel.Session);
 
-
             await ReadItemWithTokenAsync(order1.id, order1.OrderAddress.City, token);
 
         }

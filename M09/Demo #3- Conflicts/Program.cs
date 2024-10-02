@@ -66,7 +66,7 @@ namespace TheCloudShopsLoader
                     UpdateItemInRegionAsync(ConfigurationManager.AppSettings["Region2"]),
                     UpdateItemInRegionAsync(ConfigurationManager.AppSettings["Region1"]),
                     UpdateItemInRegionAsync(ConfigurationManager.AppSettings["Region1"]),
-                                     UpdateItemInRegionAsync(ConfigurationManager.AppSettings["Region1"]),
+                    UpdateItemInRegionAsync(ConfigurationManager.AppSettings["Region1"]),
                     UpdateItemInRegionAsync(ConfigurationManager.AppSettings["Region2"]),
                     UpdateItemInRegionAsync(ConfigurationManager.AppSettings["Region1"]),
                     UpdateItemInRegionAsync(ConfigurationManager.AppSettings["Region2"]),

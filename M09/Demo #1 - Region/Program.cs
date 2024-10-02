@@ -76,15 +76,19 @@ namespace CosmosGettingStartedTutorial
         /// </summary>
         public async Task CosmosClientAsync()
         {
+            Console.WriteLine("Connecting to app pref regions 'centralus'");
+
             // Create a new instance of the Cosmos Client
             using (cosmosClient = new CosmosClient(EndpointUri, PrimaryKey, new CosmosClientOptions()
             {
                 ConsistencyLevel = ConsistencyLevel.Eventual,
                 ConnectionMode = ConnectionMode.Direct,
-                ApplicationPreferredRegions = new List<string> { "eastus2", "westus" },
+                ApplicationPreferredRegions = new List<string> { Regions.CentralUS },
                 ApplicationName = "CosmosDBDotnetQuickstart"
             }))
             {
+                
+
                 await CreateDatabaseAsync();
                 await CreateContainerAsync();
                 await QueryItemsAsync();
@@ -95,6 +99,9 @@ namespace CosmosGettingStartedTutorial
 
         public async Task CosmosClientBuilderAsync()
         {
+
+            Console.WriteLine("Connecting to region:" + Regions.WestUS);
+
             // Create a new instance of the Cosmos Client by builder
             using (cosmosClient = new CosmosClientBuilder(connectionString)
                   .WithApplicationRegion(Regions.WestUS)
@@ -102,6 +109,7 @@ namespace CosmosGettingStartedTutorial
                   .Build()
                 )
             {
+                
                 await CreateDatabaseAsync();
                 await CreateContainerAsync();
                 await QueryItemsAsync();
