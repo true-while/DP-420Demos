@@ -3,3 +3,6 @@ CDBDataPlaneRequests
 | where TimeGenerated >= ago(1h) 
 | summarize OperationCount = count(), TotalRequestCharged=sum(todouble(RequestCharge)) by OperationName 
 | order by TotalRequestCharged desc 
+
+
+

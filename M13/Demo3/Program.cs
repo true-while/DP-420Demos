@@ -149,8 +149,11 @@ namespace TheCloudShopsTriggerTest
             };
 
 
-            //create orders
+        
+            Console.WriteLine("Creating item WITH customer:");
             await CreateDocumentsIfNotExists(orderWithCustomer);
+
+            Console.WriteLine("Creating item WITHOUT customer:");
             await CreateDocumentsIfNotExists(orderNoCustomer);
         }
     }
